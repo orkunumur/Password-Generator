@@ -19,7 +19,7 @@ Tabloyu genel olarak incelediğimizde karşımıza 4 sütun çıkıyor: "Şifre 
 
 Burada örnek olarak yapılmış birkaç tane işlem görmektesiniz, şifre sütununa dikkatli bakıldığında 3 farkı şifre oluşturma işlemi yapıldığını anlayabilirsiniz. Kullanıcı bu şifrelerin arasından kullanacaklarının ilk önce Şifre Etiketi değerini değiştirip ardından Şifreni Şeç sütununda işaretlemiştir. Bu işlemden sonra kullanıcı "Şeçili Şifreleri Kaydet" butonuna basacaktır. Bu işlemin ardından programın altında "Şifreler Parola Kayıt Defterine Kaydedildi" şeklinde bir mesaj yazacaktır. Kullanıcı bu sayfada Sol Üst köşede bulunan şifrelerim seçeneğinin içersinden "Parola Kayıt Defteri" adında bir arayüze ulaşabilir. Bu sayfanın amacı kişinin mevcut şifrelerini tutmaktır. İçersindeki veriyi database'den almaktadır. 
 
-![Şifre Oluşturucu 1 03 2023 00_44_44](https://user-images.githubusercontent.com/119891602/221990854-83491633-574d-422a-811a-be703d7d2533.png)
+![MainWindow 1 03 2023 00_53_31](https://user-images.githubusercontent.com/119891602/221991964-d8804634-b088-4711-b944-d4ec127c2066.png)
 
 Bu sayfada genel olarak görüntüleme işlemi yapılmaktadır. Kullanıcı "Ara" butonu sayersinde şifre ismini yazarak ilgili satırdaki şifresini bulabilir. Kullanım ömrünü tamamlamış şifresini seçip database'den "SİL" butonunun yardımıyla kaldırabilir. Yine aynı zamanda şifrelerini "A'dan Z'ye", "Z'den A'ya" ve "Tarih" kategorilerine göre sılama seçeneği mevcuttur. 
 
