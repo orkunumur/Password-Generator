@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="kilit">
+    <file>kilit.png</file>
+  </qresource>
+</RCC>
