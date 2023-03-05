@@ -14,7 +14,6 @@ class Sifrelerim(QMainWindow):
         self.sifrelerim = Ui_sifrelerim_ui()
         self.sifrelerim.setupUi(self)
         self.sifrelerim.kayit_defteri.setHorizontalHeaderLabels(("Şifre Etiketi", "Şifre", "Tarih", "Sil"))
-        self.hucreler_devredisi()
         self.sifrelerim.siralama.currentIndexChanged.connect(self.tablo_siralama)
         self.sifrelerim.ara_lineedit.returnPressed.connect(self.tablo_arama)
         self.sifrelerim.ara_push_but.clicked.connect(self.tablo_arama)
@@ -25,13 +24,6 @@ class Sifrelerim(QMainWindow):
     def closeEvent(self, event):
         self.sifrelerim.kayit_defteri.clearContents()
         self.sifrelerim.kayit_defteri.setRowCount(0)
-
-    def hucreler_devredisi(self):
-        for row in range(self.sifrelerim.kayit_defteri.rowCount()):
-            for col in [1, 2]: # Şifre ve Tarih sütunları
-                item = self.sifrelerim.kayit_defteri.item(row, col)
-                item.setFlags(item.flags() & ~Qt.ItemIsEditable)
-    
 
     def db_baglanti_ac(self):
         try:
@@ -56,6 +48,7 @@ class Sifrelerim(QMainWindow):
             for col_index, col_data in enumerate(row_data):
                 item = QTableWidgetItem(str(col_data))
                 self.sifrelerim.kayit_defteri.setItem(row_index, col_index, item)
+                self.sifrelerim.kayit_defteri.item(row_index, col_index).setFlags(self.sifrelerim.kayit_defteri.item(row_index, col_index).flags() & ~Qt.ItemIsEditable)
 
             check_box = QCheckBox()
             self.sifrelerim.kayit_defteri.setCellWidget(row_index, self.sifrelerim.kayit_defteri.columnCount()-1, check_box)

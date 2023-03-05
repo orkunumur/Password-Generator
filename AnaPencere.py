@@ -42,8 +42,6 @@ class MainPage(QMainWindow):
                 self.ui.sifre_olustur_table.cellWidget(row, 3).setChecked(False)
             else:
                 pass
-
-
         try:
             if self.ui.karakter_sayisi_2.hasAcceptableInput() and self.ui.sifre_sayisi.hasAcceptableInput():
                 pass
@@ -59,7 +57,7 @@ class MainPage(QMainWindow):
         nums= int(self.ui.sifre_sayisi.text())
 
       
-        #self.sonuc_signal.emit(self.situation_control(leng, nums))
+        #self.sonuc_signal.emit(self.situation_control(leng, nums))                                  
         self.situation_control(leng, nums)
         #Sifrelerim.db_sifre_ekle()
 
